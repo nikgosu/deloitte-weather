@@ -22,7 +22,7 @@ export class AppEffects {
     mergeMap(action =>
       this._httpAPI.getWeatherByCityName(action.payload).pipe(
         map(response => new GetWeatherSuccess(response.data[0])),
-        catchError(error => of(new SetWeatherFailure(error))) // Handling errors
+        catchError(error => of(new SetWeatherFailure(error.message))) // Handling errors
       )
     )
   ));

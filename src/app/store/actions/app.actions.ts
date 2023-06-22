@@ -1,6 +1,5 @@
 import { Action } from '@ngrx/store';
 import { CityWeatherInfo } from '../../models'
-import { HttpErrorResponse } from '@angular/common/http'
 
 export enum EAppActions {
   GET_WEATHER = '[APP] Get Cats',
@@ -33,7 +32,7 @@ export class SetIsLoading implements Action {
 export class SetWeatherFailure implements Action {
   public readonly type = EAppActions.SET_ERROR
 
-  constructor(public payload: HttpErrorResponse) {
+  constructor(public payload: string) {
   }
 }
 

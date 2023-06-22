@@ -22,7 +22,7 @@ export class WeatherCardComponent implements OnInit{
 
   ngOnInit(): void {
     this.error$.subscribe(error => {
-      error && this._snackBar.open(error.message.replace(error.url ? error.url : '', 'API'), 'Close', {
+      error && this._snackBar.open(error, 'Close', {
         panelClass: ['error-snackbar'],
         horizontalPosition: 'right',
         verticalPosition: 'bottom',
