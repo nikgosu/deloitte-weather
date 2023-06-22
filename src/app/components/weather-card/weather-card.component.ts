@@ -26,6 +26,7 @@ export class WeatherCardComponent implements OnInit{
         panelClass: ['error-snackbar'],
         horizontalPosition: 'right',
         verticalPosition: 'bottom',
+        duration: 4000
       });
     })
   }
