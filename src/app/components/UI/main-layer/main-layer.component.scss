@@ -1,0 +1,9 @@
+.container {
+  min-height: calc(100dvh - 64px);
+}
+
+@media screen and (max-width: 800px) {
+  mat-drawer-content {
+    margin-left: 0 !important;
+  }
+}

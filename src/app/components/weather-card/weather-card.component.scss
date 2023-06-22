@@ -1,0 +1,30 @@
+.card {
+  width: max-content;
+  min-width: 250px;
+  margin: 6dvh auto 0;
+
+  mat-card-content {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      margin-left: 10px;
+    }
+  }
+}
+::ng-deep .mdc-snackbar__surface {
+  background: red!important;
+  color: white;
+
+  .mat-mdc-snack-bar-label .mdc-snackbar__label {
+    color: #eae9e9;
+  }
+  button {
+    color: #eae9e9!important;
+  }
+}
+@media screen and (max-width: 800px){
+  .card {
+    width: 90dvw;
+  }
+}

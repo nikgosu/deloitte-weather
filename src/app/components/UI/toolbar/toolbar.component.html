@@ -1,0 +1,18 @@
+<mat-toolbar
+  (window:resize)="onResize($event)"
+>
+  <button
+    *ngIf="isMobile"
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+    (click)="onMenuClick.emit()"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span
+    *ngIf="isMobile"
+    class="example-spacer"
+  ></span>
+  <span>Amazing Weather App</span>
+</mat-toolbar>

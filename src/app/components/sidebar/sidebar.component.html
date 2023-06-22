@@ -1,0 +1,14 @@
+<form
+  class="container"
+>
+  <p>Select City</p>
+  <app-select
+    [options]="cities"
+    [control]="form.get('currentCity') | formControl"
+  ></app-select>
+  <p>Select Units</p>
+  <app-select
+    [options]="units"
+    [control]="form.get('units') | formControl"
+  ></app-select>
+</form>

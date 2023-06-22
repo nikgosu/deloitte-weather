@@ -1,0 +1,22 @@
+<mat-card
+  class="card"
+  *ngIf="currentWeather$ | async as currentWeather"
+>
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>{{currentWeather.city_name}}</mat-card-title>
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    Temperature: <span>{{currentWeather.temp}}</span>
+  </mat-card-content>
+  <mat-card-content>
+    Humidity: <span>{{currentWeather.rh}}</span>
+  </mat-card-content>
+  <mat-card-content>
+    Wind speed: <span>{{currentWeather.wind_spd}}</span>
+  </mat-card-content>
+  <mat-card-content>
+    Description: <span>{{currentWeather.weather.description}}</span>
+  </mat-card-content>
+</mat-card>

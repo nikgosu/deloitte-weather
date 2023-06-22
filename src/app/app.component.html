@@ -1,0 +1,23 @@
+<app-toolbar
+  class="sidebar"
+  (onMenuClick)="handleMenuClick($event)"
+></app-toolbar>
+<app-main-layer
+  [isOpened]="isOpened"
+  (window:resize)="onResize($event)"
+>
+  <app-sidebar
+    class="sidebar"
+  ></app-sidebar>
+  <app-loader
+    *ngIf="isLoading$ | async as isLoading"
+    [isLoading]="isLoading"
+    class="content"
+  >
+  </app-loader>
+  <app-weather-card
+    *ngIf="!(isLoading$ | async)"
+    class="content"
+  >
+  </app-weather-card>
+</app-main-layer>
